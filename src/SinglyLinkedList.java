@@ -5,7 +5,7 @@
 class SinglyLinkedList<E>{
 
   /**
-  *Internal class for Node representation in Linked List. Nodes contain object of same generic type E as SinglyLinkedList type E
+  *Internal class for Node representation in SinglyLinkedList. Nodes contain object of same generic type E as SinglyLinkedList type E
   **/
   private static class Node<E>{
     private E element;
@@ -47,13 +47,22 @@ class SinglyLinkedList<E>{
   public int size(){return size;}
 
   /**
-  *@return Returns true if SinglyLinkedList is empty, false otherwise
+  *@return Returns true if SinglyLinkedList is  empty, false otherwise
   **/
   public boolean isEmpty(){ return size==0;
   }
 
   /**
-  *@return Returns last element E of SinglyLinkedList is not empty, null otherwise
+  *@return Returns first element E if SinglyLinkedList is not empty, null otherwise
+  **/
+  public E first(){
+    if(isEmpty()){return null;}
+    else{return head.getElement();}
+  }
+
+
+  /**
+  *@return Returns last element E if SinglyLinkedList is not empty, null otherwise
   **/
   public E last(){
     if(isEmpty()){return null;}
