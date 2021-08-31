@@ -79,41 +79,41 @@ class SinglyLinkedList<E>{
   *Adds element at end of SinglyLinkedList
   **/
   public void addLast(E e){
-      //The newest Node<E> can be instantiated
-      Node<E> newest = new Node<>(e,null); 
-      //is the SinglyLinkedList emtpy
-      if(isEmpty()){
-        //the head Node will also be the new last Node, because the SinglyLinkedList is empty. !The next parameter of newest is still null as there is no next Node<E> for the last node.
-        head = newest;
-      }
-      else{
-        //current tail gets a next Node and is no longer the actual tail
-        tail.setNext(newest);
-      }
-      //set newest Node<E> as actual tail
-      tail = newest;
-      
-      size++;
+    //The newest Node<E> can be instantiated
+    Node<E> newest = new Node<>(e,null); 
+    //is the SinglyLinkedList emtpy
+    if(isEmpty()){
+      //the head Node will also be the newlast Node, because the SinglyLinkedListis empty. !The next parameter of newestis still null as there is no nextNode<E> for the last node.
+      head = newest;
+    }
+    else{
+      //current tail gets a next Node and isno longer the actual tail
+      tail.setNext(newest);
+    }
+    //set newest Node<E> as actual tail
+    tail = newest;
+    
+    size++;
   }
     
-    /**
-    *Removes the first Node from the SinglyLinkedList
-    *@return Returns first element E of SinglyLinkedList is not empty, null otherwise, 
-    **/
-    public E removeFirst(){
-      //if the SinglyLinkedList is emtpy, return null
-      if(isEmpty()){
-        return null;
-      }
-      //the element E to return is the element of the head Node<E> that can be fetched with the Node<E> getElement() method
-      E answer = head.getElement();
-      //already set the new head, which is the next Node from the current head
-      head = head.getNext();
-      //the size of the SinglyLinkedList has decreased by 1
-      size--;
-      //if the SinglyLinkedList is now empty, the tail should be set to null, as there is no more tail object
-      if(isEmpty()){tail=null;}
-      //finally return answer
-      return answer; 
+  /**
+  *Removes the first Node from theSinglyLinkedList
+  *@return Returns first element E ofSinglyLinkedList is not empty, nullotherwise, 
+  **/
+  public E removeFirst(){
+    //if the SinglyLinkedList is emtpy,return null
+    if(isEmpty()){
+      return null;
     }
+    //the element E to return is the elementof the head Node<E> that can be fetchedwith the Node<E> getElement() method
+    E answer = head.getElement();
+    //already set the new head, which is thenext Node from the current head
+    head = head.getNext();
+    //the size of the SinglyLinkedList hasdecreased by 1
+    size--;
+    //if the SinglyLinkedList is now empty,the tail should be set to null, as thereis no more tail object
+    if(isEmpty()){tail=null;}
+    //finally return answer
+    return answer; 
+  }
 }
