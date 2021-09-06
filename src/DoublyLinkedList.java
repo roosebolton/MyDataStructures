@@ -1,4 +1,4 @@
-class DoublyLinkedList<E>{
+public class DoublyLinkedList<E>{
 
 /**
 *Internal class for Node representation in DoublyLinkedList. Nodes contain object of same generic type E as DoublyLinkedList type E.
