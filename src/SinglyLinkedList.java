@@ -1,8 +1,9 @@
+
 /**
 *@author roosebolton github.com/roosebolton
 *A SinglyLinkedList implementation, based on Goodrich Tamassia Goldwasser
 **/
-class SinglyLinkedList<E>{
+public class SinglyLinkedList<E>{
 
   /**
   *Internal class for Node representation in SinglyLinkedList. Nodes contain object of same generic type E as SinglyLinkedList type E
