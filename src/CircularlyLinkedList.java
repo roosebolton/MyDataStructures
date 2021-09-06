@@ -2,7 +2,7 @@
 *@author roosebolton github.com/roosebolton
 *A CircularlyLinkedList implementation, based on Goodrich Tamassia Goldwasser
 **/
-class CircularlyLinkedList<E> {
+public class CircularlyLinkedList<E> {
 
 /**
 *Internal class for Node representation in CircularlyLinkedList. Nodes contain object of same generic type E as CircularlyLinkedList type E
