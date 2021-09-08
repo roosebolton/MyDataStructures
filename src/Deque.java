@@ -1,3 +1,4 @@
+
 /**
 *@author roosebolton github.com/roosebolton
 *An interface for a Dequeue, a datastructure like a queue, in which elements can be removed from both ends.
@@ -31,12 +32,12 @@ E last();
 /**
 *Inserts an element at the front of the Deque<E>
 **/
-addFirst();
+void addFirst(E element);
 
 /**
 *Inserts an element at the rear of the Deque<E>
 **/
-addLast();
+void addLast(E element);
 
 /**
 *Returns and removes the first element of the Deque<E>
