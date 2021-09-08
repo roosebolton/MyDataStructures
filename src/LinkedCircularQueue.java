@@ -1,6 +1,6 @@
 /**
 *@author roosebolton github.com/roosebolton
-*A CircularlyLinkedList implementation of a Queue, based on Goodrich Tamassia Goldwasser. It is usefull for data that is cyclically arranged. Like turns in a game, for instance.
+*A CircularlyLinkedList implementation of a Queue, based on Goodrich Tamassia Goldwasser. It is usefull for data that is cyclically arranged. Like turns in a game, for instance. Using adapter pattern by adapting circularly linked list.
 **/
 public class LinkedCircularQueue<E> implements CircularQueue<E>{
 
