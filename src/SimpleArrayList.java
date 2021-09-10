@@ -1,6 +1,6 @@
 /**
 *@author roosebolton github.com/roosebolton
-*A simplified implementation of an ArrayList, that takes O(n) time for adding and removing items and does not dynamically grow. So no suboptimal in many ways compared to the Java util ArrayList 
+*A simplified implementation of an ArrayList, that takes O(n) time for adding and removing items and does not dynamically grow. So no suboptimal in many ways compared to the Java util ArrayList, based on Goodrich Tamassia Goldwasser 
 **/
 public class SimpleArrayList<E> implements List<E>{
  
@@ -37,7 +37,7 @@ public class SimpleArrayList<E> implements List<E>{
   *Checks if the list is empty
   *@return Returns true if the list is empty, null otherwise
   **/
-  private boolean isEmpty(){ return (size==0);}
+  public boolean isEmpty(){ return (size==0);}
 
   /**
   *Does nothing if given index is valid, throws out of bounds exception if otherwise, protected for use within package
