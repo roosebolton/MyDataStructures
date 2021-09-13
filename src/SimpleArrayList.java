@@ -1,6 +1,6 @@
 /**
 *@author roosebolton github.com/roosebolton
-*A simplified implementation of an ArrayList, that takes O(n) time for adding and removing items and does not dynamically grow. So no suboptimal in many ways compared to the Java util ArrayList, based on Goodrich Tamassia Goldwasser 
+*A simplified implementation of an ArrayList, that takes O(n) time for adding and removing items and does not dynamically grow. Based on Goodrich Tamassia Goldwasser 
 **/
 public class SimpleArrayList<E> implements List<E>{
  
