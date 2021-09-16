@@ -1,8 +1,9 @@
+import java.util.Iterator;
 /**
 *@author roosebolton github.com/roosebolton
 *An interface for a List. In a list deletions and insertions can also take place at other positions than those of the first or last index
 **/
-public interface List<E>{
+public interface List<E> extends Iterable<E>{
 
   /**
   *Returns the number of elements in the list
@@ -39,4 +40,10 @@ public interface List<E>{
   *@return Returns and removes the element at given index
   **/
   E remove(int index) throws IndexOutOfBoundsException;
+
+  /**
+  *Returns an iterator of the List elements
+  *@return Returns an iterator of the List elements
+  **/
+  Iterator<E> iterator();
 }
