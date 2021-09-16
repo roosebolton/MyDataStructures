@@ -116,6 +116,53 @@ public class SimpleArrayList<E> implements List<E>{
     return temp;
 
   }
+ //////////////////private ArrayIterator class/////////////////
+
+//private iterator class, for iterating over iterable representation of the ArrayList
+private class ArrayIterator implements Iterator<E>{
+  private int j=0; //index of the next element to report
+  //status to use for safely removing an element
+  private boolean removable = false;
+  
+  /*
+  *Shows if ther is a next element in the collection, has acces to size because the ArrayIterator class is not static and can therefor check there is a next element to be iterated over. Must be implemented due to Iterator interface.
+   *@return Returns true if there is a next element to iterate over in the collection, false otherwise
+  **/
+  public boolean hasNext(){return (j < size);}
+ 
+  /**
+  *Returns the next element in the collection to iterate over
+  *@return Returns the next element in the collection to iterate over. Must be implemented due to Iterator interface.
+  *throws Throws NoSuchElementException
+  */
+  public E next()throws NoSuchElementException{
+    //is there a next element?
+    if(j==size){
+      throw new NoSuchElementException("No next element");
+    }
+    //set next element as removable from collection
+    removable = true;
+    //return the next element and increment j for future call to next() with j++. Has acces to data because ArrayIterator is not a static private class
+    return data[j++];
+  }
+
+  /**
+  *Removes the current element at iterator "cursor" position
+  *@throws Throws an IllegalStateException if element may not be removed or has not yet been "called" by iterator
+  **/
+  public void remove()throws IllegalStateException{
+    //is there an element to remove?
+    if (!removable){
+      throw new IllegalStateException("Nothing to remove");
+    }
+    //the last returned increment is the item to remove and can be found at position j-1
+    ArrayList.this.remove(j-1);
+    //as a result to removing, the current next element has shifted one index to the left at j-1
+    j--;
+    //do not leave the status of removable true, should be handled per element
+    removable = false;
+  }
+}
 
 
 }
