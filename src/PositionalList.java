@@ -1,8 +1,10 @@
+import java.util.Iterator;
+
 /**
 *@author roosebolton github.com/roosebolton
-*An interface for a positional list. A positional list is a collection of positions. Via the position, its element can be accesed. 
+*An interface for a positional list. A is a collection of positions. Via the position, its element can be accesed. 
 **/
-public interface PositionalList<E>{
+public interface PositionalList<E> extends Iterable<E>{
 /**
 *Returns the size of the PostionalList<E>
 *@return Returns the size of the PostionalList<E>
@@ -80,5 +82,17 @@ E set(Position<E> position, E element)throws IllegalArgumentException;
 *@throws IllegalArgumentException
 **/
 E remove(Position<E> position)throws IllegalArgumentException;
+
+/**
+*Returns an Iterator of the elements stored in the list
+*@return Returns an Iterator of the elements stored in the list
+**/
+Iterator<E> iterator();
+
+/**
+*Returns the positions fo the list in iterable form 
+*@return Returns the positions fo the list in iterable form
+**/
+Iterable<Position<E>> positions();
 
 }
